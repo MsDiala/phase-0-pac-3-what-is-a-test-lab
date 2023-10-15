@@ -11,15 +11,15 @@ describe("what-is-a-test", () => {
 
   describe("Height", () => {
     it("is less than 40 and greater than 0", () => {
-      expect(height).toBeMoreThan(0)
+      expect(height).toBeGreaterThan(0);  // Changed to beGreaterThan
       expect(height).toBeLessThan(40);
     });
   });
 
   describe("Message", () => {
     it("gives the name and height", () => {
-      expect(message).toInclude(name);
-      expect(message).toInclude(height);
+      expect(message).toContain(name);  // Changed to toContain
+      expect(message).toContain(height);  // Changed to toContain
     });
   });
 });
